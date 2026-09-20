@@ -1,0 +1,20 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "invariant": "Only documents owned by the current user may be returned.",
+    "before": "findMany({where: {ownerId: currentUserId}})",
+    "after": "findMany({where: {}})",
+    "context": "No other access control exists in this synthetic example."
+  },
+  "questions": {
+    "review": {
+      "type": "choice",
+      "instructions": "Does `after`, in the supplied `context`, preserve `invariant`?",
+      "criteria": {
+        "preserved": "The invariant is preserved.",
+        "violated": "The code contradicts the invariant.",
+        "insufficient": "Relevant context is missing."
+      }
+    }
+  }
+}

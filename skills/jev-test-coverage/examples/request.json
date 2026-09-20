@@ -1,0 +1,28 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "criterion": "With flag disabled, existing behavior is unchanged.",
+    "tests": [
+      {
+        "scenario": "flag enabled",
+        "assertion": "new behavior succeeds"
+      },
+      {
+        "scenario": "flag enabled and invalid input",
+        "assertion": "input rejected"
+      }
+    ]
+  },
+  "questions": {
+    "review": {
+      "type": "choice",
+      "instructions": "Do the supplied `tests` explicitly verify `criterion`?",
+      "criteria": {
+        "covered": "Assertions explicitly verify the full criterion.",
+        "partial": "Assertions verify part but not all of the criterion.",
+        "missing": "Tests do not exercise this criterion.",
+        "insufficient": "The supplied test evidence is too incomplete to judge."
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "observations": [
+      "Gateway health returns 200.",
+      "A provider request reaches upstream and upstream returns HTTP 500."
+    ],
+    "unknowns": [
+      "The upstream internal cause is unknown."
+    ]
+  },
+  "questions": {
+    "review": {
+      "type": "choice",
+      "instructions": "Based only on `observations`, which layer should be investigated first? Do not infer an internal root cause.",
+      "criteria": {
+        "upstream": "The upstream provider returned the observed failure.",
+        "gateway_unreachable": "The gateway could not be reached.",
+        "insufficient": "No observation identifies a failing layer."
+      }
+    }
+  }
+}

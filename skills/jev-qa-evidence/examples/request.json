@@ -1,0 +1,24 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "claim": "The production webhook was delivered and the provider updated its state.",
+    "evidence": [
+      "Unit tests passed locally.",
+      "CI build passed."
+    ],
+    "missing": [
+      "No delivery receipt or provider state inspection is available."
+    ]
+  },
+  "questions": {
+    "review": {
+      "type": "choice",
+      "instructions": "Does `evidence` establish `claim` in the stated production scope?",
+      "criteria": {
+        "supports": "Evidence establishes the entire claim.",
+        "contradicts": "Evidence establishes the opposite.",
+        "insufficient": "Evidence does not establish the claim or its opposite."
+      }
+    }
+  }
+}

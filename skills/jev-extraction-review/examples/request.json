@@ -1,0 +1,21 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "source_text": "Author: Alex Example. Reviewer: Sam Example.",
+    "extracted": {
+      "reviewer": "Alex Example"
+    }
+  },
+  "questions": {
+    "review": {
+      "type": "choice",
+      "instructions": "How does `source_text` relate to the reviewer identity in `extracted.reviewer`?",
+      "criteria": {
+        "supported": "The text identifies this value as reviewer.",
+        "contradicted": "The text identifies a different reviewer.",
+        "absent": "No reviewer evidence is present.",
+        "ambiguous": "The reviewer role is unclear."
+      }
+    }
+  }
+}
