@@ -1,6 +1,18 @@
-# Jev Dev Skills
+# JevScope — AI Agent Skills for Code Review & Testing
 
-Five experimental agent skills that use [TypeSafe Jev](https://docs.typesafe.ai/concepts/use-case-map) to support software development and testing. Skills, examples and documentation are in English.
+**Sharper reviews. Stronger evidence.**
+
+[![Checks](https://github.com/Pleo2/jevscope/actions/workflows/checks.yml/badge.svg)](https://github.com/Pleo2/jevscope/actions/workflows/checks.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](tools/ask.py)
+
+JevScope is an open-source collection of **AI agent skills for code review, software testing, debugging, structured extraction, and QA evidence verification**. Powered by [TypeSafe Jev](https://docs.typesafe.ai/concepts/use-case-map), it gives coding agents focused semantic checks with structured answers and probabilities.
+
+Use it to inspect a pull request against an invariant, identify missing test scenarios, triage an error, or check whether a release claim is supported by evidence. Your coding agent verifies the findings with code and tests.
+
+[Install](#install) · [Skills](#available-ai-agent-skills) · [Examples](#development-workflow-examples) · [Contribute](CONTRIBUTING.md) · [Español](README.es.md)
+
+## Available AI agent skills
 
 | Skill | Purpose |
 | --- | --- |
@@ -15,10 +27,22 @@ Five experimental agent skills that use [TypeSafe Jev](https://docs.typesafe.ai/
 Install a skill with the Skills CLI, choosing your agent when prompted:
 
 ```sh
-npx skills add Pleo2/jev-dev-skills --skill jev-test-coverage
+npx skills add Pleo2/jevscope --skill jev-test-coverage
 ```
 
 Replace the name with another skill from the table, or omit `--skill` to select skills interactively. Each folder is self-contained, including its Python client and shared protocol. You may also copy a folder into your agent's supported skills directory.
+
+## Development workflow examples
+
+Give your coding agent a concrete request and the relevant skill:
+
+- **AI code review:** “Use `jev-review-diff` to check whether this change preserves user access controls. Verify any finding against the callers.”
+- **Test gap analysis:** “Use `jev-test-coverage` to compare these acceptance criteria with the test assertions and identify missing scenarios.”
+- **Debugging:** “Use `jev-diagnose-failures` to prioritize which layer to inspect from these sanitized error logs.”
+- **Extraction validation:** “Use `jev-extraction-review` to compare these extracted fields with their source document.”
+- **QA verification:** “Use `jev-qa-evidence` to check whether this release summary is supported by the attached test and runtime evidence.”
+
+These workflows support general software projects without depending on a particular application, framework or business domain.
 
 ## Use
 
@@ -38,6 +62,24 @@ Ask your agent to use the relevant skill for a concrete task. It prepares a mini
 Jev evaluations are advisory. They do not establish test coverage, source authenticity, deployment success or permission to mutate external systems. No universal confidence thresholds are imposed. API calls may incur TypeSafe charges; dry-runs and repository tests make no API requests.
 
 The examples are small synthetic cases designed for smoke checks. This is a smoke check, not a benchmark of real-world accuracy. Model outputs can change; investigate discrepancies instead of treating examples as infallible assertions.
+
+## Frequently asked questions
+
+### What is JevScope?
+
+A set of five installable development skills, each with instructions, a synthetic example and a small Python client for TypeSafe Jev. It is an independent community project.
+
+### Can I use it with Codex or Claude Code?
+
+Use the Skills CLI and select your agent, or copy a skill folder into the skills directory supported by your agent. JevScope uses `SKILL.md` instructions and a Python client; it does not require an editor extension or an MCP server. Follow your agent's skill discovery rules.
+
+### Does it replace tests, static analysis or human review?
+
+No. It adds semantic evaluations to an existing development workflow. Keep linters, type checking, test execution and independent review as the evidence for correctness.
+
+### Is JevScope free and open source?
+
+The repository is MIT licensed. Live evaluations require a TypeSafe API key and may incur service charges. Local validation and CI run without paid API calls.
 
 ## Maintain
 
