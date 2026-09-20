@@ -1,12 +1,12 @@
-# JevScope — AI Agent Skills for Code Review & Testing
+# Awesome Jev Agent Skills — for Codex & Claude Code
 
 **Sharper reviews. Stronger evidence.**
 
-[![Checks](https://github.com/Pleo2/jevscope/actions/workflows/checks.yml/badge.svg)](https://github.com/Pleo2/jevscope/actions/workflows/checks.yml)
+[![Checks](https://github.com/Pleo2/awesome-jev-agent-skills/actions/workflows/checks.yml/badge.svg)](https://github.com/Pleo2/awesome-jev-agent-skills/actions/workflows/checks.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](tools/ask.py)
 
-JevScope is an open-source collection of **AI agent skills for code review, software testing, debugging, structured extraction, and QA evidence verification**. Powered by [TypeSafe Jev](https://docs.typesafe.ai/concepts/use-case-map), it gives coding agents focused semantic checks with structured answers and probabilities.
+Awesome Jev Agent Skills is an open-source collection of **AI agent skills for code review, software testing, debugging, structured extraction, and QA evidence verification**. Powered by [TypeSafe Jev](https://docs.typesafe.ai/concepts/use-case-map), it gives coding agents focused semantic checks with structured answers and probabilities.
 
 Use it to inspect a pull request against an invariant, identify missing test scenarios, triage an error, or check whether a release claim is supported by evidence. Your coding agent verifies the findings with code and tests.
 
@@ -27,7 +27,7 @@ Use it to inspect a pull request against an invariant, identify missing test sce
 Install a skill with the Skills CLI, choosing your agent when prompted:
 
 ```sh
-npx skills add Pleo2/jevscope --skill jev-test-coverage
+npx skills add Pleo2/awesome-jev-agent-skills --skill jev-test-coverage
 ```
 
 Replace the name with another skill from the table, or omit `--skill` to select skills interactively. Each folder is self-contained, including its Python client and shared protocol. You may also copy a folder into your agent's supported skills directory.
@@ -65,19 +65,19 @@ The examples are small synthetic cases designed for smoke checks. This is a smok
 
 ## Frequently asked questions
 
-### What is JevScope?
+### What is Awesome Jev Agent Skills?
 
 A set of five installable development skills, each with instructions, a synthetic example and a small Python client for TypeSafe Jev. It is an independent community project.
 
 ### Can I use it with Codex or Claude Code?
 
-Use the Skills CLI and select your agent, or copy a skill folder into the skills directory supported by your agent. JevScope uses `SKILL.md` instructions and a Python client; it does not require an editor extension or an MCP server. Follow your agent's skill discovery rules.
+Use the Skills CLI and select your agent, or copy a skill folder into the skills directory supported by your agent. Awesome Jev Agent Skills uses `SKILL.md` instructions and a Python client; it does not require an editor extension or an MCP server. Follow your agent's skill discovery rules.
 
 ### Does it replace tests, static analysis or human review?
 
 No. It adds semantic evaluations to an existing development workflow. Keep linters, type checking, test execution and independent review as the evidence for correctness.
 
-### Is JevScope free and open source?
+### Is Awesome Jev Agent Skills free and open source?
 
 The repository is MIT licensed. Live evaluations require a TypeSafe API key and may incur service charges. Local validation and CI run without paid API calls.
 

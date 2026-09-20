@@ -1,15 +1,15 @@
-# JevScope — Skills de IA para revisión de código y pruebas
+# Awesome Jev Agent Skills — para Codex y Claude Code
 
 **Revisiones más precisas. Evidencia más sólida.**
 
-JevScope es una colección open source de cinco skills para agentes de programación: revisión de código, cobertura de escenarios de prueba, diagnóstico de errores, validación de datos extraídos y verificación de evidencia de QA. Utiliza TypeSafe Jev para aportar evaluaciones semánticas que el agente contrasta con código y pruebas.
+Awesome Jev Agent Skills es una colección open source de cinco skills para agentes de programación: revisión de código, cobertura de escenarios de prueba, diagnóstico de errores, validación de datos extraídos y verificación de evidencia de QA. Utiliza TypeSafe Jev para aportar evaluaciones semánticas que el agente contrasta con código y pruebas.
 
 [English documentation](README.md) · [Licencia MIT](LICENSE) · [Contribuir](CONTRIBUTING.md)
 
 ## Instalación
 
 ```sh
-npx skills add Pleo2/jevscope --skill jev-test-coverage
+npx skills add Pleo2/awesome-jev-agent-skills --skill jev-test-coverage
 ```
 
 Selecciona tu agente cuando lo solicite el instalador. Omite `--skill` para elegir las skills de forma interactiva. Cada skill incluye instrucciones en inglés, ejemplos sintéticos y un cliente Python independiente.
